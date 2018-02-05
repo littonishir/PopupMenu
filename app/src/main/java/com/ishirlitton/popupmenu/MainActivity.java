@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        textView = findViewById(R.id.tv_click);
+        textView = (TextView) findViewById(R.id.tv_click);
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -41,11 +41,11 @@ public class MainActivity extends AppCompatActivity {
                         .setOnMenuItemClickListener(new IshirPopupMenu.OnMenuItemClickListener() {
                             @Override
                             public void onMenuItemClick(int position) {
-                                Toast.makeText(MainActivity.this, "click" + position, Toast.LENGTH_SHORT).show();
+                                Toast.makeText(MainActivity.this, "click：" + position+" item", Toast.LENGTH_SHORT).show();
 
                             }
                         })
-                        .showAsDropDown(textView, -200, 0);
+                        .showAsDropDown(textView, -150, 0);
 
             }
         });

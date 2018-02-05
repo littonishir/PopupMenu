@@ -45,7 +45,7 @@ public class IshirPopupMenu {
 
     private void init() {
         content = LayoutInflater.from(mContext).inflate(R.layout.popup_menu, null);
-        mRecyclerView = content.findViewById(R.id.ishir_recyclerview);
+        mRecyclerView = (RecyclerView) content.findViewById(R.id.ishir_recyclerview);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(mContext, LinearLayoutManager.VERTICAL, false));
         mRecyclerView.setOverScrollMode(View.OVER_SCROLL_NEVER);
 
